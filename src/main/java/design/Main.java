@@ -1,5 +1,6 @@
 package design;
 import design.abstract_factory.AbstractFactoryTest;
+import design.builder.LaptopTest;
 import design.singleton.DatabaseConnectionTest;
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,12 @@ public class Main {
         if(!abstractFactoryTest.test()) {
             System.err.println("Abstract factory test failed");
         }
+
+        LaptopTest laptopTest = new LaptopTest();
+        if(!laptopTest.test()){
+            System.err.println("Builder test failed");
+        }
+
         System.out.println("Done!!!");
     }
 }
